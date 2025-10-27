@@ -13,40 +13,41 @@ local PlayerMouse = Player:GetMouse()
 local redzlib = {
 	Themes = {
 	Darker = {
+  Darker = {
     ["Color Hub 1"] = ColorSequence.new({
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(80, 0, 0)),
-        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(160, 0, 0)),
-        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 0, 0))
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 0, 0)),
+        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(150, 0, 0))
     }),
-    ["Color Hub 2"] = Color3.fromRGB(120, 0, 0),
-    ["Color Stroke"] = Color3.fromRGB(200, 0, 0),
-    ["Color Theme"] = Color3.fromRGB(255, 0, 0),
-    ["Color Text"] = Color3.fromRGB(255, 100, 100),
-    ["Color Dark Text"] = Color3.fromRGB(180, 50, 50)
+    ["Color Hub 2"] = Color3.fromRGB(180, 0, 0),
+    ["Color Stroke"] = Color3.fromRGB(255, 0, 0),
+    ["Color Theme"] = Color3.fromRGB(255, 80, 80),
+    ["Color Text"] = Color3.fromRGB(255, 150, 150),
+    ["Color Dark Text"] = Color3.fromRGB(200, 50, 50)
 },
 Dark = {
     ["Color Hub 1"] = ColorSequence.new({
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(90, 0, 0)),
-        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(180, 0, 0)),
-        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(90, 0, 0))
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(160, 0, 0)),
+        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(160, 0, 0))
     }),
-    ["Color Hub 2"] = Color3.fromRGB(140, 0, 0),
-    ["Color Stroke"] = Color3.fromRGB(220, 0, 0),
-    ["Color Theme"] = Color3.fromRGB(255, 20, 20),
-    ["Color Text"] = Color3.fromRGB(255, 120, 120),
-    ["Color Dark Text"] = Color3.fromRGB(200, 80, 80)
+    ["Color Hub 2"] = Color3.fromRGB(180, 0, 0),
+    ["Color Stroke"] = Color3.fromRGB(255, 0, 0),
+    ["Color Theme"] = Color3.fromRGB(255, 80, 80),
+    ["Color Text"] = Color3.fromRGB(255, 150, 150),
+    ["Color Dark Text"] = Color3.fromRGB(200, 50, 50)
 },
 Purple = {
     ["Color Hub 1"] = ColorSequence.new({
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(90, 0, 0)),
-        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(180, 0, 0)),
-        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(90, 0, 0))
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(160, 0, 0)),
+        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(160, 0, 0))
     }),
-    ["Color Hub 2"] = Color3.fromRGB(140, 0, 0),
-    ["Color Stroke"] = Color3.fromRGB(220, 0, 0),
-    ["Color Theme"] = Color3.fromRGB(255, 20, 20),
-    ["Color Text"] = Color3.fromRGB(255, 120, 120),
-    ["Color Dark Text"] = Color3.fromRGB(200, 80, 80),
+    ["Color Hub 2"] = Color3.fromRGB(180, 0, 0),
+    ["Color Stroke"] = Color3.fromRGB(255, 0, 0),
+    ["Color Theme"] = Color3.fromRGB(255, 80, 80),
+    ["Color Text"] = Color3.fromRGB(255, 150, 150),
+    ["Color Dark Text"] = Color3.fromRGB(200, 50, 50),
     ["Color Dark Purple"] = Color3.fromRGB(180, 0, 0),
     ["Color Hub 9"] = Color3.fromRGB(0, 0, 0),
     ["Color Dark Greem"] = Color3.fromRGB(255, 130, 130)
@@ -3048,11 +3049,11 @@ BackgroundColor3 = Color3.fromRGB(200, 0, 0),
 		end
 		
 		if MembersOnline > 0 then
-			CreateStatusIndicator(Color3.fromRGB(67, 181, 129), MembersOnline .. " Online")
+			CreateStatusIndicator(Color3.fromRGB(200, 50, 50), MembersOnline .. " Online")
 		end
 		
 		if TotalMembers > 0 then
-			CreateStatusIndicator(Color3.fromRGB(86, 101, 105), TotalMembers .. " Members")
+			CreateStatusIndicator(Color3.fromRGB(120, 0, 0), TotalMembers .. " Members")
 		end
 	end
 	
@@ -3098,7 +3099,7 @@ BackgroundColor3 = Color3.fromRGB(200, 0, 0),
 		Text = "Join Server",
 		Font = Enum.Font.GothamBold,
 		TextSize = 10,
-		BackgroundColor3 = Color3.fromRGB(180, 130, 220),
+		BackgroundColor3 = Color3.fromRGB(255, 100, 100),
 		TextColor3 = Theme["Color Text"]
 	}), "Text")
 	Make("Corner", JoinButton, UDim.new(0.5, 0))
@@ -3157,7 +3158,7 @@ end
 			local InviteLabel = Create("TextLabel", InviteHolder, {
 				Size = UDim2.new(1, 0, 0, 15),
 				Position = UDim2.new(0, 5),
-				TextColor3 = Color3.fromRGB(130, 75, 220),
+				TextColor3 = Color3.fromRGB(120, 0, 0),
 				Font = Enum.Font.GothamBold,
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
