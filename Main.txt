@@ -13,7 +13,6 @@ local PlayerMouse = Player:GetMouse()
 local redzlib = {
 	Themes = {
 	Darker = {
-  Darker = {
     ["Color Hub 1"] = ColorSequence.new({
         ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 0, 0)),
         ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
@@ -39,7 +38,7 @@ Dark = {
 },
 Purple = {
     ["Color Hub 1"] = ColorSequence.new({
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(160, 0, 0)),
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(180, 0, 0)),
         ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
         ColorSequenceKeypoint.new(1.00, Color3.fromRGB(160, 0, 0))
     }),
@@ -1867,7 +1866,7 @@ end
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
 			Title = "Close",
-			Text = "Deseja realmente fechar o Drip Client? Ele contém recursos essenciais e fechar agora pode interromper funções importantes, causar falhas ou perder suas configurações. Cuidado antes de prosseguir!",
+			Text = "Deseja realmente fechar o Lyra Hub? Ele contém recursos essenciais e fechar agora pode interromper funções importantes, causar falhas ou perder suas configurações. Cuidado antes de prosseguir!",
 			Options = {
 				{"Confirm", function()
 					ScreenGui:Destroy()
@@ -2958,7 +2957,7 @@ function Tab:AddDiscordInvite(Configs)
 	local BannerArea = Create("ImageLabel", MainFrame, {
 		Size = UDim2.new(1, 0, 0.28, 0),
 		Image = BannerImage,
-BackgroundColor3 = Color3.fromRGB(200, 0, 0),
+		BackgroundColor3 = Color3.fromRGB(60, 0, 120),
 		BackgroundTransparency = BannerImage ~= "" and 1 or 0,
 		ScaleType = Enum.ScaleType.Crop
 	})
@@ -2968,8 +2967,8 @@ BackgroundColor3 = Color3.fromRGB(200, 0, 0),
 		local BannerGradient = Create("UIGradient", BannerArea, {
 			Rotation = -15,
 			Color = ColorSequence.new({
-				ColorSequenceKeypoint.new(0, Color3.fromRGB(120, 0, 0)),
-				ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 50, 50))
+				ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 0, 120)),
+				ColorSequenceKeypoint.new(1, Color3.fromRGB(80, 0, 150))
 			})
 		})
 	end
@@ -3049,11 +3048,11 @@ BackgroundColor3 = Color3.fromRGB(200, 0, 0),
 		end
 		
 		if MembersOnline > 0 then
-			CreateStatusIndicator(Color3.fromRGB(200, 50, 50), MembersOnline .. " Online")
+			CreateStatusIndicator(Color3.fromRGB(67, 181, 129), MembersOnline .. " Online")
 		end
 		
 		if TotalMembers > 0 then
-			CreateStatusIndicator(Color3.fromRGB(120, 0, 0), TotalMembers .. " Members")
+			CreateStatusIndicator(Color3.fromRGB(86, 101, 105), TotalMembers .. " Members")
 		end
 	end
 	
@@ -3099,7 +3098,7 @@ BackgroundColor3 = Color3.fromRGB(200, 0, 0),
 		Text = "Join Server",
 		Font = Enum.Font.GothamBold,
 		TextSize = 10,
-		BackgroundColor3 = Color3.fromRGB(255, 100, 100),
+		BackgroundColor3 = Color3.fromRGB(180, 130, 220),
 		TextColor3 = Theme["Color Text"]
 	}), "Text")
 	Make("Corner", JoinButton, UDim.new(0.5, 0))
@@ -3158,7 +3157,7 @@ end
 			local InviteLabel = Create("TextLabel", InviteHolder, {
 				Size = UDim2.new(1, 0, 0, 15),
 				Position = UDim2.new(0, 5),
-				TextColor3 = Color3.fromRGB(120, 0, 0),
+				TextColor3 = Color3.fromRGB(130, 75, 220),
 				Font = Enum.Font.GothamBold,
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
@@ -3211,8 +3210,8 @@ end
 				Text = "Join",
 				Font = Enum.Font.GothamBold,
 				TextSize = 12,
-				TextColor3 = Color3.fromRGB(150, 50, 50),
-				BackgroundColor3 = Color3.fromRGB(255, 180, 180)
+				TextColor3 = Color3.fromRGB(220, 220, 220),
+				BackgroundColor3 = Color3.fromRGB(50, 150, 50)
 			})Make("Corner", JoinButton, UDim.new(0, 5))
 			
 			local ClickDelay
@@ -3223,13 +3222,13 @@ end
 				ClickDelay = true
 				SetProps(JoinButton, {
 					Text = "Copied to Clipboard",
-					BackgroundColor3 = Color3.fromRGB(150, 50, 50),
-					TextColor3 = Color3.fromRGB(120, 0, 0)
+					BackgroundColor3 = Color3.fromRGB(100, 100, 100),
+					TextColor3 = Color3.fromRGB(64, 0, 120)
 				})task.wait(5)
 				SetProps(JoinButton, {
 					Text = "Join",
-					BackgroundColor3 = Color3.fromRGB(150, 50, 50),
-					TextColor3 = Color3.fromRGB(120, 0, 0)
+					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
+					TextColor3 = Color3.fromRGB(64, 0, 120)
 				})ClickDelay = false
 			end)
 			
